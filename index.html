@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merey Nurkaliyev — Crypto/VASP AML & Compliance</title>
+<meta name="description" content="Merey Nurkaliyev — AML Team Lead & crypto/VASP compliance. Multi-jurisdiction VASP licensing (VARA · SFC · AIFC), KYC/EDD, sanctions, on-chain forensics. Chainalysis Certified Advanced Investigator, ex-Binance.">
+<meta property="og:title" content="Merey Nurkaliyev — Crypto/VASP AML & Compliance">
+<meta property="og:description" content="Audit-ready, examiner-defensible AML programs in crypto. VARA · SFC · AIFC. Chainalysis CCAI, ex-Binance.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1a2f; --navy2:#0f2742; --panel:#102b49; --panel2:#13314f;
+  --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.16);
+  --txt:#e9f0f7; --muted:#9fb3c8; --muted2:#7e93a8;
+  --teal:#2bb6a3; --teal-d:#1d8e7f; --gold:#e0b964;
+  --rad:14px; --max:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--navy);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+.accent{color:var(--teal)}
+.gold{color:var(--gold)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(10,26,47,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-weight:800;letter-spacing:.2px;font-size:15px}
+.brand .dot{color:var(--teal)}
+.navlinks{display:flex;gap:22px;align-items:center}
+.navlinks a{color:var(--muted);font-size:14px;font-weight:500}
+.navlinks a:hover{color:var(--txt)}
+.navlinks .cta{color:var(--navy);background:var(--teal);padding:8px 14px;border-radius:9px;font-weight:600}
+.navlinks .cta:hover{background:#34ccb7;color:var(--navy)}
+.burger{display:none}
+@media(max-width:760px){.navlinks a:not(.cta){display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(1200px 500px at 80% -10%,rgba(43,182,163,.18),transparent 60%),
+  radial-gradient(900px 500px at 0% 0%,rgba(224,185,100,.10),transparent 55%);pointer-events:none}
+.hero .wrap{position:relative;padding:64px 22px 56px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal);border:1px solid var(--line2);padding:6px 12px;border-radius:999px;background:rgba(43,182,163,.06)}
+h1{font-size:clamp(30px,5.4vw,52px);font-weight:800;line-height:1.08;letter-spacing:-.5px;margin:18px 0 10px}
+.sub{font-size:clamp(15px,2.2vw,19px);color:var(--muted);max-width:680px}
+.sub b{color:var(--txt);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 6px}
+.tag{font-size:12.5px;font-weight:600;color:#cfe6e1;background:rgba(43,182,163,.10);border:1px solid rgba(43,182,163,.28);padding:6px 11px;border-radius:8px}
+.tag.alt{color:#f0dcad;background:rgba(224,185,100,.10);border-color:rgba(224,185,100,.30)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14.5px;padding:12px 18px;border-radius:10px;border:1px solid var(--line2);color:var(--txt);transition:.15s}
+.btn:hover{border-color:var(--teal);transform:translateY(-1px)}
+.btn.primary{background:var(--teal);color:var(--navy);border-color:var(--teal)}
+.btn.primary:hover{background:#34ccb7}
+.btn svg{width:17px;height:17px}
+.open{margin-top:24px;font-size:13.5px;color:var(--muted2)}
+.open b{color:var(--gold);font-weight:600}
+
+/* METRICS */
+.metrics{border-bottom:1px solid var(--line);background:var(--navy2)}
+.metrics .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.metric{background:var(--navy2);padding:26px 20px;text-align:center}
+.metric .n{font-size:clamp(22px,3.4vw,30px);font-weight:800;color:var(--txt)}
+.metric .n .accent{font-weight:800}
+.metric .l{font-size:12.5px;color:var(--muted);margin-top:6px}
+@media(max-width:760px){.metrics .grid{grid-template-columns:repeat(2,1fr)}}
+
+/* SECTIONS */
+section{padding:64px 0}
+.kic{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}
+h2{font-size:clamp(22px,3.6vw,30px);font-weight:800;letter-spacing:-.3px;margin:8px 0 8px}
+.lead{color:var(--muted);max-width:720px}
+.about p{color:#cdd9e6;max-width:760px;margin-top:14px}
+.about p b{color:var(--txt);font-weight:600}
+
+/* FOCUS */
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 16px;font-weight:600;font-size:14px}
+.chip span{display:block;color:var(--muted);font-weight:400;font-size:12.5px;margin-top:4px}
+@media(max-width:880px){.chips{grid-template-columns:repeat(2,1fr)}}
+
+/* EXPERIENCE */
+.tl{margin-top:30px;border-left:2px solid var(--line2);padding-left:24px;display:flex;flex-direction:column;gap:26px}
+.job{position:relative}
+.job::before{content:"";position:absolute;left:-31px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(43,182,163,.15)}
+.job .role{font-weight:700;font-size:16px}
+.job .co{color:var(--teal);font-weight:600}
+.job .dt{color:var(--muted2);font-size:12.5px;margin:2px 0 8px}
+.job p{color:#c4d2e0;font-size:14px;max-width:760px}
+
+/* PORTFOLIO */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+.card{background:linear-gradient(180deg,var(--panel),var(--navy2));border:1px solid var(--line);border-radius:var(--rad);padding:22px;display:flex;flex-direction:column;transition:.15s}
+.card:hover{border-color:var(--teal);transform:translateY(-2px)}
+.card .top{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--muted2);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.card h3{font-size:17px;font-weight:700;margin:10px 0 8px}
+.card p{color:#c0cfdd;font-size:13.6px;flex:1}
+.card .lk{margin-top:16px;font-weight:600;font-size:13.5px;color:var(--teal);display:inline-flex;align-items:center;gap:7px}
+.card .lk svg{width:15px;height:15px}
+.card .mit{font-size:11px;color:var(--muted2);border:1px solid var(--line);padding:2px 8px;border-radius:6px;margin-left:auto}
+@media(max-width:760px){.cards{grid-template-columns:1fr}}
+
+/* CALC */
+.calc{background:linear-gradient(180deg,var(--panel),var(--navy2));border:1px solid var(--line2);border-radius:18px;padding:26px;margin-top:28px}
+.calc .head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.calc h3{font-size:18px;font-weight:700}
+.calc .note{font-size:12px;color:var(--muted2);max-width:420px}
+.fields{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+@media(max-width:760px){.fields{grid-template-columns:1fr}}
+.field label{display:block;font-size:12.5px;color:var(--muted);font-weight:600;margin-bottom:6px}
+.field select{width:100%;background:var(--navy);color:var(--txt);border:1px solid var(--line2);border-radius:9px;padding:11px 12px;font-size:14px;font-family:inherit;cursor:pointer}
+.field select:focus{outline:none;border-color:var(--teal)}
+.result{margin-top:24px;display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:center}
+@media(max-width:680px){.result{grid-template-columns:1fr}}
+.score{background:var(--navy);border:1px solid var(--line2);border-radius:14px;padding:20px;text-align:center}
+.score .tier{font-size:21px;font-weight:800}
+.score .pts{font-size:12.5px;color:var(--muted);margin-top:4px}
+.score .bar{height:8px;border-radius:99px;background:rgba(255,255,255,.08);margin-top:14px;overflow:hidden}
+.score .bar i{display:block;height:100%;width:0;border-radius:99px;transition:.4s}
+.reasons{font-size:13.5px}
+.reasons .rh{font-weight:600;color:var(--muted);margin-bottom:8px;font-size:12.5px;text-transform:uppercase;letter-spacing:1px}
+.reasons ul{list-style:none}
+.reasons li{position:relative;padding-left:18px;margin-bottom:6px;color:#cbd8e5}
+.reasons li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.reasons .action{margin-top:12px;padding:11px 13px;border-radius:10px;font-weight:600;font-size:13.5px}
+
+/* CERTS */
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.cert{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+.cert .c{font-weight:700;font-size:14.5px}
+.cert .o{color:var(--teal);font-size:13px;font-weight:600;margin-top:2px}
+.cert .y{color:var(--muted2);font-size:12px;margin-top:6px}
+@media(max-width:760px){.certs{grid-template-columns:1fr}}
+
+/* CONTACT */
+.contact{border-top:1px solid var(--line);background:var(--navy2)}
+.contact .wrap{padding:56px 22px;text-align:center}
+.contact h2{margin-bottom:10px}
+.contact .lead{margin:0 auto}
+.cbtns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px}
+footer{border-top:1px solid var(--line);color:var(--muted2);font-size:12.5px}
+footer .wrap{padding:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer .disc{max-width:560px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Merey&nbsp;Nurkaliyev<span class="dot">.</span></div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#experience">Experience</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#try">Try it</a>
+      <a class="cta" href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Financial-Crime Compliance · Crypto / VASP</span>
+    <h1>AML &amp; compliance that is<br><span class="accent">audit-ready</span> and <span class="accent">examiner-defensible</span>.</h1>
+    <p class="sub">I'm <b>Merey Nurkaliyev</b> — AML Team Lead building end-to-end compliance for licensed virtual-asset businesses: KYC/EDD, sanctions, transaction monitoring, on-chain forensics, and <b>multi-jurisdiction VASP licensing</b> across VARA, SFC and AIFC.</p>
+    <div class="tags">
+      <span class="tag">VARA · SFC · AIFC licensing</span>
+      <span class="tag">KYC / EDD · Sanctions</span>
+      <span class="tag">Transaction monitoring</span>
+      <span class="tag alt">Chainalysis Certified Advanced Investigator</span>
+      <span class="tag alt">ex-Binance</span>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="https://www.linkedin.com/in/merey-nurkaliyev" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg>
+        LinkedIn
+      </a>
+      <a class="btn" href="https://github.com/Niphridium" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.8 9.6.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.9.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .3.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 3.9-1.3 6.8-5.1 6.8-9.6C22 6.6 17.5 2 12 2z"/></svg>
+        GitHub
+      </a>
+    </div>
+    <p class="open">Open to: <b>Compliance Officer · Deputy MLRO · Head of AML</b> — crypto &amp; fintech · Remote or UAE-based.</p>
+  </div>
+</header>
+
+<div class="metrics">
+  <div class="wrap">
+    <div class="grid">
+      <div class="metric"><div class="n"><span class="accent">3</span></div><div class="l">regulatory regimes — VARA · SFC · AIFC</div></div>
+      <div class="metric"><div class="n">~<span class="accent">1,500</span></div><div class="l">KYC verifications / month, hands-on</div></div>
+      <div class="metric"><div class="n"><span class="accent">10–15%</span></div><div class="l">false positives cut via tuned screening</div></div>
+      <div class="metric"><div class="n"><span class="accent">4+</span></div><div class="l">years in crypto compliance (ex-Binance)</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="kic">About</div>
+    <h2>Compliance built like an engineer thinks</h2>
+    <p>I lead anti-money-laundering and KYC operations for a virtual-asset business preparing for regulatory licensing — working at the intersection of financial-crime prevention, blockchain forensics and the risk-based approach. As AML Team Lead at Asterium I own the program end-to-end: <b>KYC/EDD workflows, AML screening &amp; risk scoring, transaction monitoring, sanctions, and the SOPs and controls that make it audit-ready</b>.</p>
+    <p>As a <b>Chainalysis Certified Advanced Investigator</b> I trace on-chain activity across UTXO- and account-based assets, investigate mixing and obfuscation, and turn findings into defensible risk decisions. Earlier, as an Auditor at Binance, I tested the design and operating effectiveness of compliance controls and reviewed flagged accounts and SARs. I also build small, explainable RegTech tools — because the best controls are the ones you can explain to a regulator.</p>
+  </div>
+</section>
+
+<section id="focus" style="padding-top:0">
+  <div class="wrap">
+    <div class="kic">What I do</div>
+    <h2>Focus areas</h2>
+    <div class="chips">
+      <div class="chip">VASP licensing<span>VARA · SFC · AIFC readiness &amp; gap analysis</span></div>
+      <div class="chip">KYC / KYB &amp; EDD<span>High-risk jurisdictions &amp; PEPs</span></div>
+      <div class="chip">Transaction monitoring<span>Structuring, velocity, clustering</span></div>
+      <div class="chip">Sanctions screening<span>Fuzzy matching, data quality</span></div>
+      <div class="chip">On-chain forensics<span>Chainalysis · tracing &amp; attribution</span></div>
+      <div class="chip">SAR / STR reporting<span>Investigations &amp; escalation</span></div>
+      <div class="chip">Travel Rule<span>FATF / IVMS101 payloads</span></div>
+      <div class="chip">AML program &amp; SOPs<span>Audit-ready, examiner-defensible</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="padding-top:0">
+  <div class="wrap">
+    <div class="kic">Experience</div>
+    <h2>Track record</h2>
+    <div class="tl">
+      <div class="job">
+        <div class="role">AML Team Lead · <span class="co">Asterium</span></div>
+        <div class="dt">2026 – Present · Crypto exchange &amp; custody (licensing-stage VASP)</div>
+        <p>Lead a 4-person AML/KYC team and own the end-to-end compliance program. Authored the full AML/KYC SOP suite from zero; drive multi-jurisdiction VASP licensing readiness (VARA, SFC); tuned screening to cut false positives ~10–15%; investigate on-chain activity and escalate for EDD / SAR review.</p>
+      </div>
+      <div class="job">
+        <div class="role">KYC Analyst · <span class="co">Wallet</span></div>
+        <div class="dt">2024 – Present · Remote</div>
+        <p>KYC verification &amp; onboarding via Sumsub at ~1,500/month; introduced OSINT into the verification flow; transaction monitoring for new users; investigated and reported high-risk profiles; kept audit-ready records of every risk decision.</p>
+      </div>
+      <div class="job">
+        <div class="role">Auditor · <span class="co">Binance</span></div>
+        <div class="dt">2023 – 2024</div>
+        <p>Audited flagged accounts, KYC re-reviews and SARs; assessed the design and operating effectiveness of key compliance controls and recommended enhancements; supported risk-based analytical sampling for financial-crime risk.</p>
+      </div>
+      <div class="job">
+        <div class="role">Senior Customer Service Agent · <span class="co">Binance</span></div>
+        <div class="dt">2022 – 2024</div>
+        <p>Handled VIP clients and complex escalations, partnering with compliance, ops and product — front-line exposure to customer risk, fraud and KYC that set the stage for the move into audit and AML.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" style="padding-top:0">
+  <div class="wrap">
+    <div class="kic">Portfolio</div>
+    <h2>Open-source RegTech</h2>
+    <p class="lead">Small, explainable tools for crypto/VASP compliance — built on synthetic data, documented, and designed to be defensible to a regulator. Rules first, ML second, human-in-the-loop.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="top">GitHub · Python <span class="mit">MIT</span></div>
+        <h3>support-chat-aml-triage</h3>
+        <p>Turns messy support-chat exports into an AML manual-review queue (red-flag screen), a ranked macro/automation backlog, and operational KPIs. A recall funnel for a human analyst — not an automated decision. RU/UZ/EN.</p>
+        <a class="lk" href="https://github.com/Niphridium/support-chat-aml-triage" target="_blank" rel="noopener">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="card">
+        <div class="top">GitHub · Python <span class="mit">MIT</span></div>
+        <h3>regtech-toolkit</h3>
+        <p>15+ explainable building blocks: Mahalanobis risk scoring, fund-flow graph analysis, fuzzy sanctions screening, Travel Rule (IVMS101) validation, SAR drafting, EWRA, KYC checklists, and a RAG layer over VARA/SFC/AIFC/FATF rules.</p>
+        <a class="lk" href="https://github.com/Niphridium/regtech-toolkit" target="_blank" rel="noopener">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="card">
+        <div class="top">GitHub · Python <span class="mit">MIT</span></div>
+        <h3>aml-monitor-demo</h3>
+        <p>Explainable transaction-monitoring engine: transparent, parameterised rules with an additive risk score where every point traces to a reason. Detects structuring, rapid-fire, high-velocity and shared-address (mixer/P2P) typologies.</p>
+        <a class="lk" href="https://github.com/Niphridium/aml-monitor-demo" target="_blank" rel="noopener">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="card">
+        <div class="top">Reference · One-pager</div>
+        <h3>VARA vs SFC vs AIFC</h3>
+        <p>A practitioner's one-page comparison of three virtual-asset licensing regimes — and why the compliance backbone (risk-based approach, CDD/EDD, sanctions, Travel Rule, SAR/STR) is portable across all three.</p>
+        <a class="lk" href="https://www.linkedin.com/in/merey-nurkaliyev/details/featured/" target="_blank" rel="noopener">See on LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="try" style="padding-top:0">
+  <div class="wrap">
+    <div class="kic">Try it live</div>
+    <h2>KYC risk-rating calculator</h2>
+    <p class="lead">A miniature, explainable risk-rating model — the same philosophy I build with: additive scoring where every point carries its reason, mapping to a CDD/EDD outcome.</p>
+    <div class="calc">
+      <div class="head">
+        <h3>Customer risk rating</h3>
+        <p class="note">Illustrative methodology only — a risk-based prompt for human review, not a SAR, a sanction, or a compliance decision.</p>
+      </div>
+      <div class="fields">
+        <div class="field"><label>Customer type</label>
+          <select id="f_type">
+            <option value="0">Individual — standard</option>
+            <option value="2">Legal entity (KYB)</option>
+            <option value="4">PEP / close associate</option>
+          </select></div>
+        <div class="field"><label>Geographic risk</label>
+          <select id="f_geo">
+            <option value="0">Low-risk jurisdiction</option>
+            <option value="2">Medium-risk</option>
+            <option value="4">High-risk / FATF-listed</option>
+          </select></div>
+        <div class="field"><label>Product / service</label>
+          <select id="f_prod">
+            <option value="0">Spot trading</option>
+            <option value="2">Fiat on/off-ramp</option>
+            <option value="3">Custody</option>
+            <option value="4">OTC / large-value</option>
+          </select></div>
+        <div class="field"><label>Onboarding channel</label>
+          <select id="f_chan">
+            <option value="0">Verified / liveness-checked</option>
+            <option value="2">Non-face-to-face (remote)</option>
+          </select></div>
+        <div class="field"><label>Source of funds</label>
+          <select id="f_sof">
+            <option value="0">Clear &amp; evidenced</option>
+            <option value="3">Unclear / unverified</option>
+          </select></div>
+        <div class="field"><label>On-chain exposure</label>
+          <select id="f_chain">
+            <option value="0">Clean</option>
+            <option value="3">Indirect exposure</option>
+            <option value="6">Direct illicit exposure</option>
+          </select></div>
+      </div>
+      <div class="result">
+        <div class="score">
+          <div class="tier" id="r_tier">Low</div>
+          <div class="pts" id="r_pts">Score 0 / 23</div>
+          <div class="bar"><i id="r_bar"></i></div>
+        </div>
+        <div class="reasons">
+          <div class="rh">Why this rating</div>
+          <ul id="r_reasons"></ul>
+          <div class="action" id="r_action"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certs" style="padding-top:0">
+  <div class="wrap">
+    <div class="kic">Credentials</div>
+    <h2>Certifications</h2>
+    <div class="certs">
+      <div class="cert"><div class="c">Chainalysis Certified Advanced Investigator</div><div class="o">Chainalysis</div><div class="y">On-chain investigations · valid to 2027</div></div>
+      <div class="cert"><div class="c">Certificate in KYC &amp; CDD</div><div class="o">International Compliance Association (ICA)</div><div class="y">Risk-based approach · EDD · sanctions</div></div>
+      <div class="cert"><div class="c">AML Fundamentals</div><div class="o">Sumsub Academy</div><div class="y">+ further AML / RegTech training on LinkedIn</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact" style="padding:0">
+  <div class="wrap">
+    <div class="kic">Contact</div>
+    <h2>Let's talk compliance</h2>
+    <p class="lead">Open to Compliance Officer / Deputy MLRO / Head of AML roles in crypto &amp; fintech — remote or UAE-based.</p>
+    <div class="cbtns">
+      <a class="btn primary" href="mailto:merey.nurkaliyev@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/merey-nurkaliyev" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/Niphridium" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="yr"></span> Merey Nurkaliyev · Almaty / Remote</div>
+    <div class="disc">Portfolio tools use synthetic data only. The calculator is an illustrative risk-based prompt, not compliance, legal, or investment advice.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+(function(){
+  var ids=['f_type','f_geo','f_prod','f_chan','f_sof','f_chain'];
+  var labels={
+    f_type:{2:'Legal entity (KYB) — added structure risk',4:'PEP / close associate — heightened risk'},
+    f_geo:{2:'Medium-risk jurisdiction',4:'High-risk / FATF-listed jurisdiction'},
+    f_prod:{2:'Fiat on/off-ramp exposure',3:'Custody of client assets',4:'OTC / large-value transactions'},
+    f_chan:{2:'Non-face-to-face onboarding'},
+    f_sof:{3:'Source of funds unclear / unverified'},
+    f_chain:{3:'Indirect on-chain exposure to risky counterparties',6:'Direct on-chain exposure to illicit activity'}
+  };
+  var MAX=23;
+  function calc(){
+    var total=0, reasons=[];
+    ids.forEach(function(id){
+      var v=parseInt(document.getElementById(id).value,10)||0;
+      total+=v;
+      if(v>0 && labels[id] && labels[id][v]) reasons.push(labels[id][v]);
+    });
+    var tier,color,action;
+    if(total<=3){tier='Low';color='#3fb37f';action='Standard CDD. Periodic review.';}
+    else if(total<=8){tier='Medium';color='#e0b964';action='Standard CDD + ongoing monitoring.';}
+    else if(total<=14){tier='High';color='#e8893f';action='Enhanced Due Diligence (EDD) required before/at onboarding.';}
+    else {tier='Very High';color='#e0564f';action='EDD + senior compliance sign-off. Review for SAR/STR if activity warrants.';}
+    document.getElementById('r_tier').textContent=tier;
+    document.getElementById('r_tier').style.color=color;
+    document.getElementById('r_pts').textContent='Score '+total+' / '+MAX;
+    var bar=document.getElementById('r_bar');
+    bar.style.width=Math.min(100,Math.round(total/MAX*100))+'%';
+    bar.style.background=color;
+    var ul=document.getElementById('r_reasons');
+    ul.innerHTML = reasons.length ? reasons.map(function(r){return '<li>'+r+'</li>';}).join('') : '<li>All factors low — no elevated risk drivers selected.</li>';
+    var act=document.getElementById('r_action');
+    act.textContent=action;
+    act.style.background='linear-gradient(90deg,'+color+'22,'+color+'11)';
+    act.style.border='1px solid '+color+'55';
+    act.style.color=color;
+  }
+  ids.forEach(function(id){document.getElementById(id).addEventListener('change',calc);});
+  calc();
+})();
+</script>
+</body>
+</html>
