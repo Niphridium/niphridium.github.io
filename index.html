@@ -11,204 +11,176 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2315191C'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%233FB58A'/%3E%3C/svg%3E">
-
-
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-:root{--bg:#15191C;--surface:#1E2428;--surface2:#232B30;--ink:#E8ECEA;--muted:#98A39F;--line:#2C3439;--accent:#3FB58A;--glow:#1B3A2F;
---clean:#6CC79C;--clean-bg:#163A2E;--review:#E8B864;--review-bg:#3B2E15;--alert:#F28B73;--alert-bg:#43201A;color-scheme:dark;
---display:"Bricolage Grotesque","Avenir Next","Segoe UI",sans-serif;--body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
---s1:13px;--s2:15px;--s3:17px;--s4:22px;--s5:clamp(30px,4.4vw,44px);--s6:clamp(44px,8.4vw,108px)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;background:var(--bg);color:var(--ink);font:var(--s3)/1.6 var(--body);padding-inline:max(16px,env(safe-area-inset-left))}
-body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(80% 50% at 100% 0%,var(--glow) 0%,transparent 70%)}
-body::after{content:"";position:fixed;inset:0;z-index:-1;opacity:.14;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(180deg,#000,transparent 80%)}
-a{color:var(--accent);text-underline-offset:3px}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
-h1,h2,h3,p{margin:0}h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.05}
-.wrap{max-width:1180px;margin:0 auto}
-.eyebrow{font:500 var(--s1)/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.chip{display:inline-block;font:500 11px/1 var(--mono);letter-spacing:.06em;padding:4px 9px;border-radius:999px;white-space:nowrap}
-.chip.clean{color:var(--clean);background:var(--clean-bg)}.chip.review{color:var(--review);background:var(--review-bg)}.chip.alert{color:var(--alert);background:var(--alert-bg)}
-/* top bar */
-.bar{position:sticky;top:0;z-index:20;margin-inline:calc(50% - 50vw);padding:14px max(16px,calc(50vw - 590px));display:flex;justify-content:space-between;align-items:center;gap:16px;background:rgba(21,25,28,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.mark{font:800 20px var(--display);color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
-.mark i{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--clean-bg)}
-nav{display:flex;gap:6px;flex-wrap:wrap;font-size:var(--s2)}nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:999px}
-nav a:hover,nav a.on{color:var(--ink);background:var(--surface)}nav a.cta{color:var(--bg);background:var(--accent);font-weight:500}
-/* hero */
-.hero{padding-block:clamp(56px,9vw,120px) 40px}
-.hero h1{font-size:var(--s6);font-weight:800;letter-spacing:-.035em;margin-top:22px;max-width:14ch}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;margin-top:48px;align-items:end}
-.lede{font-size:var(--s4);line-height:1.5;color:var(--muted);max-width:36ch}.lede strong{color:var(--ink);font-weight:500}
-.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{font:500 var(--s2)/1 var(--body);padding:14px 22px;border-radius:999px;border:1.5px solid var(--accent);background:var(--accent);color:var(--bg);text-decoration:none}
-.btn.ghost{background:transparent;color:var(--accent)}.btn:hover{filter:brightness(1.08)}
-.status{margin-top:26px;display:flex;gap:10px;align-items:center;color:var(--muted);font-size:var(--s2)}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--clean);box-shadow:0 0 0 4px var(--clean-bg)}
-/* trail */
-.trail{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px 26px 18px}
-.trail-head{display:flex;justify-content:space-between;font:500 12px var(--mono);color:var(--muted);letter-spacing:.06em}
-.trail svg{display:block;width:100%;height:auto;margin-top:6px}
-.trail .path{stroke-dasharray:520;stroke-dashoffset:520;animation:draw 2.2s .3s ease forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-.trail text{font:500 11px "IBM Plex Mono",monospace;fill:#98A39F}.trail .v{fill:#E8ECEA}
-.verdict{display:flex;justify-content:space-between;align-items:center;margin-top:6px;padding:12px 16px;border-radius:12px;background:var(--review-bg);color:var(--review);font:600 15px var(--mono);letter-spacing:.06em}
-.case-note{font-size:12px;color:var(--muted);margin-top:12px}
-/* numbers */
-.evidence{display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px;border-block:1px solid var(--line)}
-.evidence div{padding:28px 22px 26px 0}.evidence div+div{padding-left:22px;border-left:1px solid var(--line)}
-.num{font:800 var(--s5)/1 var(--display);letter-spacing:-.02em}.evidence p+p{font-size:var(--s2);color:var(--muted);margin-top:10px;max-width:24ch}
-/* sections */
-section{padding-block:clamp(64px,9vw,112px) 0}
-.sec-head{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:34px}
-.sec-head .idx{font:500 var(--s2) var(--mono);color:var(--accent)}.sec-head h2{font-size:var(--s5);font-weight:800;letter-spacing:-.02em}.sec-head .eyebrow{margin-left:auto}
-.rows{border-top:1px solid var(--line)}
-.row3{display:grid;grid-template-columns:90px minmax(0,.9fr) minmax(0,1.3fr);gap:28px;padding-block:32px;border-bottom:1px solid var(--line)}
-.row3 .n{font:800 56px/1 var(--display);color:var(--glow);-webkit-text-stroke:1px var(--accent)}
-.row3 h3{font-size:28px;font-weight:700;margin-top:8px}.row3 p{color:var(--muted);font-size:var(--s3)}
-.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;padding:0;list-style:none}.tags li{font:12px var(--mono);padding:5px 10px;border:1px solid var(--line);border-radius:999px}
-/* timeline */
-.tl{position:relative;padding-left:34px}.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent),var(--line))}
-.job{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin-bottom:18px}
-.job::before{content:"";position:absolute;left:-34px;top:32px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
-.when{font:500 var(--s1) var(--mono);color:var(--accent);letter-spacing:.06em}.job h3{font-size:26px;font-weight:700;margin-top:8px}.org{color:var(--muted);font-size:var(--s2);margin-top:4px}
-.job ul{margin:14px 0 0;padding-left:18px;display:grid;gap:7px;font-size:var(--s2);max-width:70ch}
-.earlier{color:var(--muted);font-size:var(--s2);max-width:76ch;margin-top:26px}
-/* bento */
-.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.proj{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:10px;grid-column:span 2;min-width:0;transition:transform .25s,border-color .25s}
-.proj:hover{transform:translateY(-3px);border-color:var(--accent)}
-.proj.big{grid-column:span 4;background:linear-gradient(135deg,#1B3A2F 0%,var(--surface) 65%)}
-.proj.wide{grid-column:span 3}
-.proj .tag{font:12px var(--mono);color:var(--muted)}.proj h3{font-size:24px;font-weight:700}.proj.big h3{font-size:34px}
-.proj p{color:var(--muted);font-size:var(--s2)}.proj a.go{margin-top:auto;font-weight:500;font-size:var(--s2);padding-top:6px}
-.mini{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
-/* writing */
-.posts{border-top:1px solid var(--line)}.post{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:baseline;padding-block:24px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none}
-.post h3{font:600 var(--s4)/1.3 var(--body)}.post:hover h3{color:var(--accent)}.post p{color:var(--muted);font-size:var(--s2);margin-top:6px}.post span{font:12px var(--mono);color:var(--muted);white-space:nowrap}
-.new{font:600 10px var(--mono);letter-spacing:.08em;color:var(--bg);background:var(--accent);padding:3px 7px;border-radius:999px;margin-left:8px;vertical-align:middle}
-/* creds */
-.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.cred{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
-.cred h3{font:500 var(--s1) var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}.cred ul{list-style:none;margin:0;padding:0;display:grid;gap:11px;font-size:var(--s2)}.cred small{display:block;color:var(--muted);font-size:13px}
-/* contact */
-.contact{margin-block:clamp(64px,9vw,112px) 28px;border:1px solid var(--line);border-radius:28px;padding:clamp(28px,6vw,64px);display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:end;background:linear-gradient(135deg,var(--glow),var(--surface) 70%)}
-.contact h2{font-size:var(--s6);font-weight:800;letter-spacing:-.03em;line-height:.98}.contact p{color:var(--muted);margin-top:16px;max-width:42ch}
-.links{display:grid;gap:10px}.link-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border:1px solid var(--line);background:var(--bg);border-radius:14px;font:var(--s1) var(--mono)}
-.link-row a,.link-row span{color:var(--ink);text-decoration:none;overflow-wrap:anywhere;min-width:0}.copy{font:500 12px var(--mono);background:var(--accent);color:var(--bg);border:0;border-radius:999px;padding:8px 14px;cursor:pointer}
-footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-block:18px 40px;font-size:13px;color:var(--muted)}
-.rv{opacity:1;transform:none}.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
-@media (max-width:900px){.hero-row,.contact{grid-template-columns:1fr}.evidence{grid-template-columns:repeat(2,1fr)}.evidence div:nth-child(3){padding-left:0;border-left:0}.evidence div:nth-child(n+3){border-top:1px solid var(--line)}
-.row3{grid-template-columns:56px 1fr}.row3 p{grid-column:2}.row3 .n{font-size:40px}.creds{grid-template-columns:1fr}.proj,.proj.big,.proj.wide{grid-column:span 6}nav a:not(.cta){display:none}}
-@media (max-width:560px){.post{grid-template-columns:1fr;gap:6px}.job{padding:20px}.sec-head .eyebrow{margin-left:0;width:100%}}
-@media (prefers-reduced-motion:reduce){.trail .path{animation:none;stroke-dashoffset:0}.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-</style></head><body>
-<div class="wrap">
-<div class="bar"><a class="mark" href="#top"><i aria-hidden="true"></i>Merey Nurkaliyev</a>
-<nav aria-label="Sections"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#writing">Writing</a><a href="#contact" class="cta">Contact</a></nav></div>
+:root{--bg:#15191C;--bg2:#101417;--surface:#1E2428;--ink:#E8ECEA;--muted:#98A39F;--line:rgba(232,236,234,.16);--line2:rgba(232,236,234,.08);--accent:#3FB58A;--clean:#6CC79C;--review:#E8B864;--alert:#F28B73;
+--display:"Bricolage Grotesque","Avenir Next",sans-serif;--body:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;--pad:clamp(16px,3.2vw,40px)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:70px;background:var(--bg2)}
+body{background:var(--bg2);color:var(--ink);font:300 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}ul{list-style:none;padding:0}
+.mono,.lab{font:500 11.5px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.lab{color:var(--muted)}.lab b{color:var(--accent);font-weight:500}
+.top{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:14px var(--pad);background:rgba(16,20,23,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2)}
+.top nav{display:flex;gap:22px}.top nav a{color:var(--muted);transition:color .2s}.top nav a:hover{color:var(--ink)}
+.brand{font:500 12px var(--mono);letter-spacing:.42em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.brand i{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+.top .r{justify-self:end}.top .r a{border:1px solid var(--accent);color:var(--accent);padding:8px 14px;border-radius:999px;transition:.2s}.top .r a:hover{background:var(--accent);color:var(--bg)}
+.stage{position:relative;padding:var(--pad)}
+.frame{position:relative;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:linear-gradient(180deg,#14191c,#0f1315);min-height:min(86vh,760px);display:flex;flex-direction:column;justify-content:space-between;padding:clamp(18px,3vw,40px)}
+#wave{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.frame>*:not(canvas){position:relative;z-index:1}
+.f-top,.f-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.hero-mid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(24px,5vw,72px);align-items:end;padding:clamp(40px,9vh,110px) 0 24px}
+h1{font:300 clamp(40px,6.6vw,98px)/.98 var(--display);letter-spacing:-.035em}
+h1 em{font-style:normal;color:var(--accent);font-weight:500}
+.lede{color:var(--muted);max-width:54ch;font-size:18px;margin-top:26px}.lede strong{color:var(--ink);font-weight:500}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;padding:14px 22px;border-radius:999px;border:1px solid var(--accent);background:var(--accent);color:#0c1411;transition:.2s}
+.btn.ghost{background:transparent;color:var(--accent)}.btn:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(63,181,138,.25)}
+.specs{display:grid;gap:0;border-left:1px solid var(--line)}
+.spec{padding:14px 0 14px 22px;border-bottom:1px solid var(--line2)}.spec:last-child{border-bottom:0}
+.spec .big{font:300 clamp(38px,5vw,68px)/1 var(--body);letter-spacing:-.03em;color:var(--ink)}
+.spec .big sup{font-size:.4em;color:var(--accent);margin-left:4px;vertical-align:top;position:relative;top:.35em}
+.spec p{color:var(--muted);font-size:13.5px;max-width:30ch;margin-top:6px;line-height:1.4}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--clean);margin-right:9px;box-shadow:0 0 10px var(--clean)}
+section{padding:clamp(64px,10vw,130px) var(--pad) 0;max-width:1320px;margin:0 auto}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:36px;border-bottom:1px solid var(--line);padding-bottom:16px}
+h2{font:300 clamp(30px,4.4vw,58px)/1.05 var(--display);letter-spacing:-.03em}
+h3{font:500 clamp(19px,2vw,25px)/1.2 var(--display);letter-spacing:-.015em}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.cell{padding:26px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:14px;min-height:300px;transition:background .25s}
+.cell:last-child{border-right:0}.cell:hover{background:rgba(63,181,138,.05)}
+.cell .no{font:300 54px/1 var(--body);color:var(--accent);letter-spacing:-.03em}
+.cell p{color:var(--muted);font-size:15.5px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}.tags li{font:500 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:5px 9px;border-radius:99px;color:var(--muted)}
+.job{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:30px 0;border-bottom:1px solid var(--line2)}
+.job .when{font:500 12px var(--mono);letter-spacing:.12em;color:var(--accent);padding-top:6px}
+.job .org{color:var(--muted);margin:4px 0 14px;font-size:15px}
+.job ul{display:grid;gap:8px;color:#c4cdca;font-size:15.5px}.job li{padding-left:18px;position:relative}.job li:before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--accent)}
+.earlier{color:var(--muted);margin-top:26px;max-width:72ch;font-size:15px}
+.pgrid{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line)}
+.p{padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:12px;grid-column:span 2;transition:background .25s}
+.p:hover{background:rgba(63,181,138,.05)}.p.big{grid-column:span 4}
+.p p{color:var(--muted);font-size:15px}.go{margin-top:auto;font:500 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.post{display:flex;justify-content:space-between;gap:24px;padding:22px 0;border-bottom:1px solid var(--line2);transition:padding .25s}.post:hover{padding-left:12px}
+.post p{color:var(--muted);font-size:15px;max-width:70ch;margin-top:4px}.post>span{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.new{font:500 10px var(--mono);letter-spacing:.14em;background:var(--accent);color:#0c1411;padding:3px 7px;border-radius:99px;margin-left:10px;vertical-align:middle}
+.creds{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.cred{padding:26px;border-right:1px solid var(--line)}.cred:last-child{border-right:0}
+.cred h3{margin-bottom:14px;color:var(--accent);font:500 11.5px var(--mono);letter-spacing:.14em;text-transform:uppercase}.cred li{padding:8px 0;border-bottom:1px solid var(--line2);font-size:15.5px}.cred small{display:block;color:var(--muted);font-size:13px}
+.contact{margin-top:clamp(64px,10vw,130px);border:1px solid var(--line);display:grid;grid-template-columns:1.1fr .9fr;gap:30px;padding:clamp(24px,4vw,54px);background:linear-gradient(135deg,rgba(63,181,138,.07),transparent 60%)}
+.contact h2{margin-bottom:12px}.contact>div>p{color:var(--muted);max-width:44ch}
+.link-row{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.copy{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--ink);padding:4px 10px;border-radius:99px;cursor:pointer}
+footer{max-width:1320px;margin:0 auto;padding:44px var(--pad) 36px;display:flex;justify-content:space-between;color:var(--muted);font:500 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.js .rv{opacity:0;transform:translateY(14px);transition:.7s cubic-bezier(.2,.7,.2,1)}.js .rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hero-mid{grid-template-columns:1fr;padding-top:50px}.specs{border-left:0;border-top:1px solid var(--line);grid-template-columns:1fr 1fr}.spec{padding:16px 12px 16px 0}
+.top{grid-template-columns:auto 1fr}.top nav{display:none}.grid3,.creds{grid-template-columns:1fr}.cell,.cred{border-right:0;border-bottom:1px solid var(--line)}.cell{min-height:0}.cell:last-child,.cred:last-child{border-bottom:0}
+.job{grid-template-columns:1fr;gap:6px}.pgrid{grid-template-columns:1fr}.p,.p.big{grid-column:auto;border-right:0}.contact{grid-template-columns:1fr}.post{flex-direction:column;gap:8px}}
+@media(max-width:520px){.f-top .lab:nth-child(2){display:none}.specs{grid-template-columns:1fr 1fr}.spec .big{font-size:34px}.brand{letter-spacing:.3em}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<header class="top">
+ <a class="brand" href="#top"><i aria-hidden="true"></i>Merey</a>
+ <nav class="lab" aria-label="Sections"><a href="#work">:Work</a><a href="#experience">:Experience</a><a href="#projects">:Projects</a><a href="#writing">:Writing</a></nav>
+ <div class="r lab"><a href="#contact">:Contact</a></div>
+</header>
 <main id="top">
-<div class="hero">
- <p class="eyebrow">Crypto AML · Investigations · Compliance controls</p>
- <h1>If a control can’t show its evidence, <em>it didn’t run.</em></h1>
- <div class="hero-row">
+<div class="stage"><div class="frame">
+ <canvas id="wave" aria-hidden="true"></canvas>
+ <div class="f-top lab"><span><b>:</b>Crypto AML</span><span><b>:</b>Investigations</span><span><b>:</b>Compliance controls</span></div>
+ <div class="hero-mid">
   <div>
+   <h1>If a control can’t show its evidence, <em>it didn’t run.</em></h1>
    <p class="lede">I lead AML operations and investigations at a <strong>virtual-asset business</strong>. I turn regulatory rules into controls that run every day and leave a trail an examiner can follow.</p>
    <div class="btns"><a class="btn" href="https://www.linkedin.com/in/merey-nurkaliyev/" target="_blank" rel="noopener">LinkedIn</a><a class="btn ghost" href="#contact">Get in touch</a></div>
-   <p class="status"><span class="dot" aria-hidden="true"></span>Temporarily in Tashkent, Uzbekistan</p>
   </div>
-  <aside class="trail" aria-label="Example of a wallet screening result">
-   <div class="trail-head"><span>wallet screening · example</span><span>USDT · TRC-20</span></div>
-   <svg viewBox="0 0 560 170" role="img" aria-label="Address TQ7m…4fXa, three hops: exchange NO MATCH, p2p cluster REVIEW, mixer 2.1% ALERT">
-    <path class="path" d="M40 70 C110 70 110 40 190 40 S 270 90 350 90 S 440 50 510 50" fill="none" stroke="#3FB58A" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="40" cy="70" r="9" fill="#3FB58A"/><circle cx="190" cy="40" r="9" fill="#6CC79C"/><circle cx="350" cy="90" r="9" fill="#E8B864"/><circle cx="510" cy="50" r="9" fill="#F28B73"/>
-    <g text-anchor="middle"><text class="v" x="40" y="128">address</text><text x="40" y="146">TQ7m…4fXa</text>
-    <text class="v" x="190" y="128">hop 1 · exchange</text><text x="190" y="146" style="fill:#6CC79C">NO MATCH</text>
-    <text class="v" x="350" y="128">hop 2 · p2p cluster</text><text x="350" y="146" style="fill:#E8B864">REVIEW</text>
-    <text class="v" x="508" y="128">hop 3 · mixer</text><text x="508" y="146" style="fill:#F28B73">ALERT · 2.1%</text></g>
-   </svg>
-   <div class="verdict"><span>verdict → analyst queue</span><b>REVIEW</b></div>
-   <p class="case-note">Synthetic illustration. Indirect exposure requires context; hop count alone does not establish illicit activity. A human reviewer owns the decision.</p>
-  </aside>
+  <div class="specs" aria-label="Key numbers">
+   <div class="spec"><p class="big">4<sup>+</sup></p><p>years in crypto: Binance, Telegram Wallet, Asterium</p></div>
+   <div class="spec"><p class="big">3</p><p>virtual-asset regimes compared: VARA, SFC, AIFC</p></div>
+   <div class="spec"><p class="big">CDD</p><p>and EDD: KYC review experience at Wallet</p></div>
+   <div class="spec"><p class="big">KYT</p><p>review standards, escalations and documented risk decisions</p></div>
+  </div>
  </div>
- <div class="evidence" aria-label="Key numbers">
-  <div><p class="num">4+ yrs</p><p>in crypto: Binance, Telegram Wallet, Asterium</p></div>
-  <div><p class="num">CDD / EDD</p><p>KYC review experience at Wallet</p></div>
-  <div><p class="num">KYC / KYT</p><p>review standards, escalations and documented risk decisions</p></div>
-  <div><p class="num">3</p><p>virtual-asset regimes compared: VARA, SFC, AIFC</p></div>
- </div>
-</div>
+ <div class="f-bot lab"><span><span class="dot" aria-hidden="true"></span>Temporarily in Tashkent, Uzbekistan</span><span>Scroll ↓</span></div>
+</div></div>
 
-<section id="work"><div class="sec-head rv"><span class="idx">01</span><h2>What I do</h2><p class="eyebrow">second line, hands on</p></div>
-<div class="rows rv">
- <div class="row3"><span class="n">1</span><div><p class="eyebrow">Programme</p><h3>Financial-crime programme</h3></div><div><p>KYC/KYB, EDD, sanctions and PEP screening, Travel Rule, transaction monitoring, STR filing and law-enforcement requests, written as SOPs that hold up in an audit.</p><ul class="tags"><li>KYC/EDD</li><li>Sanctions</li><li>Travel Rule</li><li>STR/SAR</li></ul></div></div>
- <div class="row3"><span class="n">2</span><div><p class="eyebrow">Licensing</p><h3>Licensing readiness</h3></div><div><p>Supporting licensing readiness through regulatory mapping, gap analysis and procedure development for virtual-asset businesses.</p><ul class="tags"><li>VARA</li><li>SFC</li><li>AIFC / AFSA</li></ul></div></div>
- <div class="row3"><span class="n">3</span><div><p class="eyebrow">Automation</p><h3>Controls in code</h3></div><div><p>Personal prototypes explore wallet screening, KYT alerts and analyst reporting. Public demonstrations use synthetic or public data; deployment and employer adoption are not claimed.</p><ul class="tags"><li>Node.js</li><li>Python</li><li>Public sanctions lists</li><li>Open on-chain data</li></ul></div></div>
+<section id="work"><div class="head rv"><h2>What I do</h2><span class="lab"><b>:</b>second line, hands on</span></div>
+<div class="grid3 rv">
+ <div class="cell"><span class="no">01</span><span class="lab">Programme</span><h3>Financial-crime programme</h3><p>KYC/KYB, EDD, sanctions and PEP screening, Travel Rule, transaction monitoring, STR filing and law-enforcement requests, written as SOPs that hold up in an audit.</p><ul class="tags"><li>KYC/EDD</li><li>Sanctions</li><li>Travel Rule</li><li>STR/SAR</li></ul></div>
+ <div class="cell"><span class="no">02</span><span class="lab">Licensing</span><h3>Licensing readiness</h3><p>Supporting licensing readiness through regulatory mapping, gap analysis and procedure development for virtual-asset businesses.</p><ul class="tags"><li>VARA</li><li>SFC</li><li>AIFC / AFSA</li></ul></div>
+ <div class="cell"><span class="no">03</span><span class="lab">Automation</span><h3>Controls in code</h3><p>Personal prototypes explore wallet screening, KYT alerts and analyst reporting. Public demonstrations use synthetic or public data; deployment and employer adoption are not claimed.</p><ul class="tags"><li>Node.js</li><li>Python</li><li>Public sanctions lists</li><li>Open on-chain data</li></ul></div>
 </div></section>
 
-<section id="experience"><div class="sec-head rv"><span class="idx">02</span><h2>Experience</h2><p class="eyebrow">most recent first</p></div>
-<div class="tl">
- <article class="job rv"><p class="when">2026 — now</p><h3>Head of Operations &amp; Investigations, AML</h3><p class="org">Virtual-asset business · previously AML Team Lead</p><ul>
+<section id="experience"><div class="head rv"><h2>Experience</h2><span class="lab"><b>:</b>most recent first</span></div>
+ <article class="job rv"><p class="when">2026 — NOW</p><div><h3>Head of Operations &amp; Investigations, AML</h3><p class="org">Virtual-asset business · previously AML Team Lead</p><ul>
   <li>Oversee investigations and compliance operations for a multi-jurisdiction virtual-asset business, with 24/7 coverage.</li>
   <li>Authored the AML/KYC SOP suite: KYC workflows, EDD, screening and risk scoring, operational and InfoSec controls.</li>
   <li>Supported licensing readiness for VARA (Dubai) and the SFC framework (Hong Kong): regulatory mapping, gap analysis and procedure development.</li>
-  <li>Deputise for the MLRO during absences: STR decisions and filing, data packages for law-enforcement requests.</li></ul></article>
- <article class="job rv"><p class="when">2024 — 2026</p><h3>KYC Analyst</h3><p class="org">Telegram Wallet · remote</p><ul>
+  <li>Deputise for the MLRO during absences: STR decisions and filing, data packages for law-enforcement requests.</li></ul></div></article>
+ <article class="job rv"><p class="when">2024 — 2026</p><div><h3>KYC Analyst</h3><p class="org">Telegram Wallet · remote</p><ul>
   <li>Reviewed KYC cases in Sumsub and used OSINT to support customer due diligence.</li>
-  <li>Monitored new users’ transactions, blacklisted suspicious addresses and reported high-risk cases.</li></ul></article>
- <article class="job rv"><p class="when">2022 — 2024</p><h3>Auditor · Senior Customer Service Agent</h3><p class="org">Binance · Almaty, remote</p><ul>
+  <li>Monitored new users’ transactions, blacklisted suspicious addresses and reported high-risk cases.</li></ul></div></article>
+ <article class="job rv"><p class="when">2022 — 2024</p><div><h3>Auditor · Senior Customer Service Agent</h3><p class="org">Binance · Almaty, remote</p><ul>
   <li>Audited flagged accounts, KYC re-reviews, inheritance cases and SAR-related files.</li>
   <li>Tested the design and operating effectiveness of compliance controls with risk-based sampling.</li>
-  <li>Before audit: VIP client escalations alongside compliance and operations.</li></ul></article>
-</div>
-<p class="earlier">Before crypto: over ten years in operations where accuracy is checked. DHL Kazakhstan trace and claims cases, the diplomatic post office at the U.S. Consulate in Almaty, and procurement at KazTrubService.</p></section>
+  <li>Before audit: VIP client escalations alongside compliance and operations.</li></ul></div></article>
+ <p class="earlier">Before crypto: over ten years in operations where accuracy is checked. DHL Kazakhstan trace and claims cases, the diplomatic post office at the U.S. Consulate in Almaty, and procurement at KazTrubService.</p>
+</section>
 
-<section id="projects"><div class="sec-head rv"><span class="idx">03</span><h2>Open-source and side projects</h2><p class="eyebrow">personal projects · data sources noted below</p></div>
-<div class="bento">
- <article class="proj big rv"><p class="tag">TRON · sanctions &amp; on-chain checks</p><h3>Wallet Checker</h3><p>A TRON-address screening interface with source-linked observations and a downloadable report. Results require review; imported service labels are not independently verified.</p><a class="go" href="https://app-one-alpha-10.vercel.app/en" target="_blank" rel="noopener">Open the live checker →</a></article>
- <article class="proj rv"><p class="tag">Interactive demo · synthetic data</p><h3>Trade Monitor</h3><p>A market-surveillance sample you can open up: see why an alert fired, move the threshold and export the evidence. Rules are reproducible and tested.</p><a class="go" href="https://niphridium.github.io/trade-monitor-public-sample/" target="_blank" rel="noopener">Open the demo →</a></article>
- <article class="proj wide rv"><p class="tag">Python · MIT · synthetic data</p><h3>aml-alert-brief</h3><p>Turns an AML alert into a plain-language brief for the analyst: a reasoned risk score and a draft SAR narrative for human review; it does not file a report.</p><a class="go" href="https://github.com/Niphridium/aml-alert-brief" target="_blank" rel="noopener">View on GitHub →</a></article>
- <article class="proj wide rv"><p class="tag">Python · RU / UZ / EN · MIT · synthetic data</p><h3>support-chat-aml-triage</h3><p>Reads support-chat exports as a risk signal: mines contact reasons for a macro backlog and routes phrases like “I split the amount” to manual review.</p><a class="go" href="https://github.com/Niphridium/support-chat-aml-triage" target="_blank" rel="noopener">View on GitHub →</a></article>
- <article class="proj wide rv"><p class="tag">ISO/IEC 27001 · Annex A</p><h3>Security self-assessment</h3><p>Personal learning work on exposed secrets, dependency risks and network exposure, using ISO/IEC 27001 Annex A as a reference.</p><span class="tag">personal learning project</span></article>
- <article class="proj wide rv"><p class="tag">Licensing one-pager</p><h3>VARA vs SFC vs AIFC</h3><p>A practitioner’s comparison of three virtual-asset regimes. The compliance backbone carries over; capital, custody and governance rules differ.</p><a class="go" href="https://www.linkedin.com/in/merey-nurkaliyev/" target="_blank" rel="noopener">In my LinkedIn Featured →</a></article>
+<section id="projects"><div class="head rv"><h2>Open-source and side projects</h2><span class="lab"><b>:</b>personal projects · data sources noted below</span></div>
+<div class="pgrid rv">
+ <article class="p big"><span class="lab">TRON · sanctions &amp; on-chain checks</span><h3>Wallet Checker</h3><p>A TRON-address screening interface with source-linked observations and a downloadable report. Results require review; imported service labels are not independently verified.</p><a class="go" href="https://app-one-alpha-10.vercel.app/en" target="_blank" rel="noopener">Open the live checker →</a></article>
+ <article class="p"><span class="lab">Interactive demo · synthetic data</span><h3>Trade Monitor</h3><p>A market-surveillance sample you can open up: see why an alert fired, move the threshold and export the evidence. Rules are reproducible and tested.</p><a class="go" href="https://niphridium.github.io/trade-monitor-public-sample/" target="_blank" rel="noopener">Open the demo →</a></article>
+ <article class="p"><span class="lab">Python · MIT · synthetic data</span><h3>aml-alert-brief</h3><p>Turns an AML alert into a plain-language brief for the analyst: a reasoned risk score and a draft SAR narrative for human review; it does not file a report.</p><a class="go" href="https://github.com/Niphridium/aml-alert-brief" target="_blank" rel="noopener">View on GitHub →</a></article>
+ <article class="p"><span class="lab">Python · RU / UZ / EN · MIT · synthetic data</span><h3>support-chat-aml-triage</h3><p>Reads support-chat exports as a risk signal: mines contact reasons for a macro backlog and routes phrases like “I split the amount” to manual review.</p><a class="go" href="https://github.com/Niphridium/support-chat-aml-triage" target="_blank" rel="noopener">View on GitHub →</a></article>
+ <article class="p"><span class="lab">ISO/IEC 27001 · Annex A</span><h3>Security self-assessment</h3><p>Personal learning work on exposed secrets, dependency risks and network exposure, using ISO/IEC 27001 Annex A as a reference.</p><span class="lab">personal learning project</span></article>
+ <article class="p"><span class="lab">Licensing one-pager</span><h3>VARA vs SFC vs AIFC</h3><p>A practitioner’s comparison of three virtual-asset regimes. The compliance backbone carries over; capital, custody and governance rules differ.</p><a class="go" href="https://www.linkedin.com/in/merey-nurkaliyev/" target="_blank" rel="noopener">In my LinkedIn Featured →</a></article>
 </div></section>
 
-<section id="writing"><div class="sec-head rv"><span class="idx">04</span><h2>Writing</h2><a class="eyebrow" href="https://www.linkedin.com/in/merey-nurkaliyev/recent-activity/all/" target="_blank" rel="noopener">all posts on LinkedIn →</a></div>
-<div class="posts rv">
+<section id="writing"><div class="head rv"><h2>Writing</h2><a class="lab" href="https://www.linkedin.com/in/merey-nurkaliyev/recent-activity/all/" target="_blank" rel="noopener"><b>:</b>all posts on LinkedIn →</a></div>
+<div class="rv">
  <a class="post" href="https://www.linkedin.com/feed/update/urn:li:activity:7522671365359812609/" target="_blank" rel="noopener"><div><h3>Frozen is not recovered<span class="new">NEW</span></h3><p>Traced does not mean frozen. Frozen does not mean recovered. An illustrative example of how one word changes meaning between the source and the slide.</p></div><span>Risk reporting</span></a>
  <a class="post" href="https://www.linkedin.com/in/merey-nurkaliyev/recent-activity/all/" target="_blank" rel="noopener"><div><h3>Most AML teams don’t have an alert problem. They have a false-positive problem.</h3><p>Use automation for repeatable checks, document uncertainty and keep a human accountable for the decision.</p></div><span>AI · monitoring</span></a>
  <a class="post" href="https://www.linkedin.com/in/merey-nurkaliyev/recent-activity/all/" target="_blank" rel="noopener"><div><h3>Your support inbox is an AML sensor</h3><p>Third-party funds, structuring and source-of-funds questions show up in chat before they show up in monitoring.</p></div><span>RegTech</span></a>
  <a class="post" href="https://www.linkedin.com/in/merey-nurkaliyev/recent-activity/all/" target="_blank" rel="noopener"><div><h3>Three regulators, three philosophies, one compliance backbone</h3><p>VARA, SFC and AIFC side by side: what changes and what stays the same.</p></div><span>Licensing</span></a>
 </div></section>
 
-<section id="credentials"><div class="sec-head rv"><span class="idx">05</span><h2>Credentials</h2></div>
+<section id="credentials"><div class="head rv"><h2>Credentials</h2><span class="lab"><b>:</b>certified · learning · languages</span></div>
 <div class="creds rv">
  <div class="cred"><h3>Certified</h3><ul><li>Chainalysis Certified Advanced Investigator<small>also Investigator and Compliance Analyst</small></li><li>ICA Certificate in KYC &amp; CDD</li></ul></div>
  <div class="cred"><h3>Learning now</h3><ul><li>ISO/IEC 27001:2022<small>ISMS, Annex A, Statement of Applicability</small></li><li>SOC 2<small>Trust Services Criteria, Type I and II</small></li><li>CAMS<small>planned</small></li></ul></div>
  <div class="cred"><h3>Education and languages</h3><ul><li>Suleyman Demirel University</li><li>English · Russian · Kazakh · Turkish</li></ul></div>
-</div></section>
-
+</div>
 <div class="contact rv" id="contact"><div><h2>Let’s talk compliance.</h2><p>Connect with me on LinkedIn to discuss crypto AML, investigations and compliance controls.</p></div>
-<div class="links"><div class="link-row"><span id="email">merey.nurkaliyev@gmail.com</span><button class="copy" id="copy-email" type="button">Copy</button></div>
+<div><div class="link-row"><span id="email">merey.nurkaliyev@gmail.com</span><button class="copy" id="copy-email" type="button">Copy</button></div>
 <div class="link-row"><a href="https://www.linkedin.com/in/merey-nurkaliyev/" target="_blank" rel="noopener">linkedin.com/in/merey-nurkaliyev</a><span aria-hidden="true">↗</span></div>
 <div class="link-row"><a href="https://github.com/Niphridium" target="_blank" rel="noopener">github.com/Niphridium</a><span aria-hidden="true">↗</span></div></div></div>
+</section>
 </main>
 <footer><span>© 2026 Merey Nurkaliyev</span><span>Tashkent · GMT+5</span></footer>
-</div>
 <script>
 document.documentElement.classList.add('js');
 (function(){var els=document.querySelectorAll('.rv');
  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
- var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
- els.forEach(function(e){io.observe(e)});setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},4000)})();
-(function(){var links=document.querySelectorAll('nav a[href^="#"]:not(.cta)');if(!('IntersectionObserver' in window))return;
- var m={};links.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
- var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){links.forEach(function(a){a.classList.remove('on')});var a=m[x.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-40% 0px -55% 0px'});
- Object.keys(m).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)})})();
-document.getElementById('copy-email').addEventListener('click',function(){var btn=this,t=document.getElementById('email').textContent;
- function done(ok){btn.textContent=ok?'Copied':'Select';setTimeout(function(){btn.textContent='Copy'},1800)}
- function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
- try{navigator.clipboard.writeText(t).then(function(){done(true)},function(){sel();done(false)})}catch(e){sel();done(false)}});
-</script></body></html>
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+ els.forEach(function(e){io.observe(e)});setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},3500)})();
+(function(){var cv=document.getElementById('wave'),cx=cv.getContext('2d'),W,H,D=1,t=0,still=matchMedia('(prefers-reduced-motion:reduce)').matches,vis=true;
+ function size(){var r=cv.getBoundingClientRect();D=Math.min(devicePixelRatio||1,2);W=cv.width=r.width*D;H=cv.height=r.height*D}
+ function draw(){cx.clearRect(0,0,W,H);var gap=(W>900*D?15:12)*D,rows=Math.ceil(H/gap*.95),cols=Math.ceil(W/gap),base=H*.36;
+  for(var j=0;j<rows;j++){var y0=base+j*gap*.9-rows*gap*.15,k=j/rows;
+   for(var i=0;i<cols;i++){var x=i*gap,w=Math.sin(i*.17+t*.9+j*.21)*Math.cos(j*.23-t*.6)+Math.sin(i*.07-t*.5)*.8;
+    var y=y0+w*gap*(1.2+k*2.2),a=.16+.6*Math.max(0,Math.sin(i*.17+t*.9+j*.21))*(1-k*.35);
+    cx.fillStyle='rgba(108,199,156,'+a.toFixed(3)+')';cx.fillRect(x,y,1.6*D,1.6*D)}}}
+ function loop(){if(vis){t+=.012;draw()}requestAnimationFrame(loop)}
+ size();draw();addEventListener('resize',function(){size();draw()});
+ new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(cv);
+ if(!still)loop()})();
+document.getElementById('copy-email').addEventListener('click',function(){var btn=this,t=document.getElementById('email').textContent;function done(ok){btn.textContent=ok?'Copied':'Select';setTimeout(function(){btn.textContent='Copy'},1600)}
+ try{navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(false)})}catch(e){done(false)}});
+</script>
+</body>
+</html>
